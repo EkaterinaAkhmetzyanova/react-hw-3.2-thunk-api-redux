@@ -1,12 +1,8 @@
 /* eslint-disable no-undef */
 import React from 'react';
-import { Provider } from "react-redux";
 import { BrowserRouter as Router, Redirect, Route, Switch } from 'react-router-dom';
-import ReactDOM from 'react-dom';
-import store from './store';
 import ServiceAdd from './components/ServiceAdd';
 import ServiceList from './components/ServiceList';
-//import serviceWorker from './serviceWorker'
 
 function App() {
   return (
@@ -22,15 +18,4 @@ function App() {
   )
 }
 
-ReactDOM.render(
-  <React.StrictMode>
-     <Provider store={store}>
-         <App />
-      </Provider>
-  </React.StrictMode>,
-  document.getElementById('root')
-);
-
 export default App;
-
-//serviceWorker.unregister();
